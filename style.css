@@ -17,4 +17,26 @@
     background: #fff;   
     padding: 40px 30px 70px;
     border-radius: 10px;
+    text-align: center;
+}
+.quiz-container h1{
+    color:#16222A ;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.quiz-container a{
+    text-decoration: none;
+    margin: 20px auto 0;
+    background-color: #3A6073;
+    color: #fff;
+    padding: 12px 20px;
+    border:none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s transform 0.3s;
+}
+.quiz-container a:hover {
+    background-color: #2C4951;
+    
 }
