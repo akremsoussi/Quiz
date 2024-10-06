@@ -8,6 +8,7 @@
     width: 100%;
     min-height: 100vh;
     padding: 10px;
+    padding-bottom: 0;
     background:linear-gradient(150deg,#16222A,#3A6073) ;
 }
 .quiz-container{
@@ -80,4 +81,17 @@
 }
 .quiz-container button:active{
     transform: translateY(0);
+}
+
+#next-button {
+    margin-top: 20px;
+    margin-bottom: 0;
+    background-color: #16222A;
+    color: #fff;
+    padding: 12px 20px;
+    border:none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s transform 0.3s;
 }
