@@ -51,6 +51,53 @@ const movieTriviaQuestions = [
     }
   ];
 
+
+let score = 0;
+let currentQuestionIndex = 0;
+let askedQuestions = [];
   
 
-  
+function loadQuestion() {
+    if (askedQuestions.length === movieTriviaQuestions.length) {
+        document.getElementById('question').textContent = "You've completed the quiz!";
+        document.getElementById('choices').innerHTML = "";
+        document.getElementById('score').textContent = `Your final score is: ${score}/${movieTriviaQuestions.length}`;
+        document.getElementById('next-button').style.display = 'none';
+        return;
+    }
+
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * movieTriviaQuestions.length);
+    } while (askedQuestions.includes(randomIndex));
+
+    askedQuestions.push(randomIndex);
+    currentQuestionIndex = randomIndex;
+
+    const currentQuestion = movieTriviaQuestions[currentQuestionIndex];
+    document.getElementById('question').textContent = currentQuestion.question;
+    document.getElementById('choices').innerHTML = '';
+
+    currentQuestion.options.forEach(option => {
+        const button = document.createElement('button');
+        button.textContent = option;
+        button.onclick = () => checkAnswer(option);
+        document.getElementById('choices').appendChild(button);
+    });
+}
+
+function checkAnswer(selectedOption) {
+  const currentQuestion = movieTriviaQuestions[currentQuestionIndex];
+  if (selectedOption === currentQuestion.answer) {
+      score++;
+  }
+  document.getElementById('next-button').style.display = 'block';
+}
+function nextQuestion() {
+  document.getElementById('next-button').style.display = 'none';
+  loadQuestion();
+}
+window.onload = () => {
+  loadQuestion();
+  document.getElementById('next-button').style.display = 'none';
+};

@@ -40,3 +40,44 @@
     background-color: #2C4951;
     
 }
+
+.question-container{
+    width: 100%;
+    background: #2C4951;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 650;
+}
+
+.choices-container{
+    margin: 20px auto 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.choices-container button{
+    
+    width: 49%;
+    font-size: 16px;
+    font-weight: 450;
+    text-decoration: none;
+    margin: 20px auto 0;
+    background-color: #3A6073;
+    color: #fff;
+    padding: 12px 20px;
+    border:none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s transform 0.3s;
+}
+
+.quiz-container button:hover {
+    background-color: #2C4951;
+    transform: translateY(-2px);
+}
+.quiz-container button:active{
+    transform: translateY(0);
+}
