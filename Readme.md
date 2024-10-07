@@ -29,9 +29,3 @@ We welcome your contributions to this project! If you have ideas to enhance the 
 * **Introduce New Features:** Implement additional functionalities to improve the quiz experience. 
 
 Please submit a pull request on GitHub to share your proposed changes.
-
-### License:
-
-This project is distributed under the MIT License. Refer to the `LICENSE` file for details.
-
-**Play, learn movie trivia, and consider contributing to this fun and engaging quiz!**
